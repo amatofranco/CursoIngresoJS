@@ -1,0 +1,9 @@
+{
+    "[css]": {
+        "liveServer.settings.ChromeDebuggingAttachmen": true,
+"liveServer.settings.useLocalIp":true,
+"liveServer.settings.fullReload":true,
+"liveServer.settings.port": 8080,
+    
+    }
+}
