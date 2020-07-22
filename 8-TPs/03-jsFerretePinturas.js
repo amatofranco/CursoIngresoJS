@@ -10,7 +10,7 @@ function FahrenheitCentigrados ()
     farenheit = parseFloat(document.getElementById("txtIdTemperatura").value);
     centigrados = (farenheit - 32) * 5/9;
 
-    alert (farenheit + " Farenheit son " + centigrados + " Centígrados");
+    alert (farenheit + " Farenheit son " + centigrados.toFixed(2) + " Centígrados");
 	
 }
 
@@ -20,8 +20,8 @@ function CentigradosFahrenheit ()
     let farenheit;
 
     centigrados = parseFloat(document.getElementById("txtIdTemperatura").value);
-    farenheit = (centigrados * 9/5 + 32);
+    farenheit = (centigrados * 9/5) + 32;
 
-    alert (centigrados + " Centígrados son " + farenheit + " Farenheit");
+    alert (centigrados + " Centígrados son " + farenheit.toFixed(2) + " Farenheit");
 	
 }
