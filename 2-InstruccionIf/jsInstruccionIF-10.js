@@ -1,15 +1,15 @@
 function mostrar()
 {	let numeroRandom;
 	
-	numeroRandom = Math.floor(Math.random() * 11);
+	nota = Math.floor(Math.random() * 11);
 
-	if (numeroRandom >= 9){
-		alert ("EXCELENTE. Su nota es: "+numeroRandom)
+	if (nota>= 9){
+		alert ("EXCELENTE. Su nota es: "+nota)
 	}
-	else if (numeroRandom >=4 && numeroRandom <9){
-		alert ("APROBÓ. Su nota es: "+numeroRandom);
+	else if ((nota >=4) && (nota <=8)){
+		alert ("APROBÓ. Su nota es: "+nota);
 	}
 	else
-		alert ("Vamos que la próxima se puede. Su nota es: "+numeroRandom);
+		alert ("Vamos que la próxima se puede. Su nota es: "+nota);
 
 }//FIN DE LA FUNCIÓN
