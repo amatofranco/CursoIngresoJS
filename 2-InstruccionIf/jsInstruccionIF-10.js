@@ -6,7 +6,7 @@ function mostrar()
 	if (numeroRandom >= 9){
 		alert ("EXCELENTE. Su nota es: "+numeroRandom)
 	}
-	else if (numeroRandom >=4 & numeroRandom <9){
+	else if (numeroRandom >=4 && numeroRandom <9){
 		alert ("APROBÓ. Su nota es: "+numeroRandom);
 	}
 	else
