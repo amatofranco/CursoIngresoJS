@@ -9,22 +9,16 @@ function mostrar()
 		case "Febrero":
 			alert("Este mes tiene 28 dias");
 			break;
-		case "Enero":
-		case "Marzo":
-		case "Mayo":
-		case "Julio":
-		case "Agosto":
-		case "Octubre":
-		case "Diciembre":
-			alert("Este mes tiene 31 días");
+		case "Abril":
+		case "Junio":
+		case "Septiembre":
+		case "Noviembre":
+			alert("Este mes tiene 30 días");
 			break;
 		default:
-			alert("Este mes tiene 30 días");
+			alert("Este mes tiene 31 días");
+			break;
 	}
-
-	
-	
-
 
 
 }//FIN DE LA FUNCIÓN

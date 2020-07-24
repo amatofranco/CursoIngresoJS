@@ -1,7 +1,6 @@
 function mostrar()
 {	let numMaximo = 10;
 	let numMinimo = 1;
-	let numRandom;
 	let nota;
 	
 	nota = Math.round( Math.random() * (numMaximo-numMinimo) + numMinimo );

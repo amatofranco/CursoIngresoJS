@@ -10,6 +10,7 @@ function mostrar()
 			break;
 		default:
 			alert("Acá hace calor");
+			break;
 	}
 
 }//FIN DE LA FUNCIÓN

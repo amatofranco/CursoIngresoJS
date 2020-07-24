@@ -1,79 +1,64 @@
 function mostrar()
 {
-	let destinoIngresado;
-	let estacionIngresada;
-	let tarifaBase;
-	let importeAumento;
-	let importeDescuento;
-	let tarifaFinal; 
+	let destino;
+	let estacion;
+	let porcentaje;
+	let precioBase;
+	let precioFinal; 
 
-	destinoIngresado = document.getElementById("txtIdDestino").value;
-	estacionIngresada = document.getElementById("txtIdEstacion").value;
-	tarifaBase = 15000;
+	destino = document.getElementById("txtIdDestino").value;
+	estacion = document.getElementById("txtIdEstacion").value;
 	
-	switch(estacionIngresada){
+	
+	switch(estacion){
 
 		case "Invierno":
-			switch (destinoIngresado){
+			switch (destino){
 				case "Bariloche":
-				importeAumento = tarifaBase * 0.20;
-				tarifaFinal = tarifaBase + importeAumento;
-				alert ("La tarifa final es de $" + tarifaFinal);
+				porcentaje = 1.20;
 				break;
 
 				case "Cataratas":
 				case "Cordoba":
-				importeDescuento = tarifaBase * 0.10;
-				tarifaFinal = tarifaBase - importeDescuento;
-				alert ("La tarifa final es de $" + tarifaFinal);
+				porcentaje = 0.90;
 				break;
 
 				case "Mar del plata":
-				importeDescuento = tarifaBase * 0.20;
-				tarifaFinal = tarifaBase - importeDescuento;
-				alert ("La tarifa final es de $" + tarifaFinal);
-				break;
+				porcentaje = 0.80;
 			}
+			break;
+
 		case "Verano":
-			switch (destinoIngresado){
+			switch (destino){
 				case "Bariloche":
-				importeDescuento = tarifaBase * 0.10;
-				tarifaFinal = tarifaBase - importeDescuento;
-				alert ("La tarifa final es de $" + tarifaFinal);
+				porcentaje = 0.90;
 				break;
 
 				case "Cataratas":
 				case "Cordoba":
-				importeAumento = tarifaBase * 0.10;
-				tarifaFinal = tarifaBase + importeAumento;
-				alert ("La tarifa final es de $" + tarifaFinal);
+				porcentaje = 1.10;
 				break;
 
 				case "Mar del plata":
-				importeAumento = tarifaBase * 0.20;
-				tarifaFinal = tarifaBase + importeAumento;
-				alert ("La tarifa final es de $" + tarifaFinal);
+				porcentaje = 1.20;
 				break;
-
 			}
+			break;
+
 		case "Otoño":
 		case "Primavera":
-			switch (destinoIngresado) {
-
-				case "Bariloche":
-				case "Cataratas":
-				case "Mar del plata":
-				importeAumento = tarifaBase * 0.10;
-				tarifaFinal = tarifaBase + importeAumento;
-				alert ("La tarifa final es de $" + tarifaFinal);
-				break;
-				
+			switch (destino) {
 				case "Cordoba":
-				alert ("La tarifa final es de $" + tarifaBase);	
+				porcentaje = 1;
+				break;
 
-
+				default:
+				porcentaje = 1.10;
 			}
-
 	}
+
+	precioBase = 15000;
+	precioFinal = precioBase * porcentaje;
+	alert ("El precio final para viajar a " + destino + " en " + estacion + " es de $" + precioFinal);
 
 }//FIN DE LA FUNCIÓN
