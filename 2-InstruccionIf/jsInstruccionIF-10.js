@@ -1,12 +1,15 @@
 function mostrar()
-{	let numeroRandom;
+{	let numMaximo = 10;
+	let numMinimo = 1;
+	let numRandom;
+	let nota;
 	
-	nota = Math.floor(Math.random() * 11);
+	nota = Math.round( Math.random() * (numMaximo-numMinimo) + numMinimo );
 
 	if (nota>= 9){
 		alert ("EXCELENTE. Su nota es: "+nota)
 	}
-	else if ((nota >=4) && (nota <=8)){
+	else if (nota >=4 && nota <=8){
 		alert ("APROBÓ. Su nota es: "+nota);
 	}
 	else
