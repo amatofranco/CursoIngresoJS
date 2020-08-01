@@ -1,5 +1,4 @@
-function CalcularPrecio () 
-{
+function CalcularPrecio() {
     let precioBase;
     let descuento;
     let cantidad;
@@ -7,73 +6,73 @@ function CalcularPrecio ()
     let precioFinal;
     let ingresosBrutos;
 
-    cantidad = parseInt(document.getElementById("txtIdCantidad").value); 
+    cantidad = parseInt(document.getElementById("txtIdCantidad").value);
     marca = document.getElementById("Marca").value;
-    
-    if (cantidad >=6){
+
+    if (cantidad >= 6) {
         descuento = 0.5;
     }
 
-    else if (cantidad >=3){
-    
-        switch (marca){
+    else if (cantidad >= 3) {
+
+        switch (marca) {
 
             case "ArgentinaLuz":
 
-                    switch(cantidad){
+                switch (cantidad) {
 
-                    case 5:   
-                    descuento = 0.4;        
-                    break;
+                    case 5:
+                        descuento = 0.4;
+                        break;
 
                     case 4:
-                    descuento = 0.25;
-                    break;
+                        descuento = 0.25;
+                        break;
 
                     case 3:
-                    descuento = 0.15;
-                    break;
+                        descuento = 0.15;
+                        break;
                 }
                 break;
 
             case "FelipeLamparas":
 
-                    switch(cantidad){
+                switch (cantidad) {
 
                     case 4:
-                    descuento = 0.25;                
-                    break;
+                        descuento = 0.25;
+                        break;
 
                     case 3:
-                    descuento = 0.10;
-                    break;
+                        descuento = 0.10;
+                        break;
 
                     default:
-                    descuento = 0;
+                        descuento = 0;
                 }
                 break;
 
             default:
 
-                switch (cantidad){
+                switch (cantidad) {
 
                     case 5:
-                    descuento = 0.30;
-                    break;
+                        descuento = 0.30;
+                        break;
 
                     case 4:
-                    descuento = 0.20;
-                    break;
+                        descuento = 0.20;
+                        break;
 
                     case 3:
-                    descuento = 0.05;
-                    break;
+                        descuento = 0.05;
+                        break;
                 }
-            }
+        }
 
     }
     else {
-    descuento = 0;
+        descuento = 0;
     }
 
     precioBase = 35 * cantidad;
@@ -82,10 +81,10 @@ function CalcularPrecio ()
 
     document.getElementById("txtIdprecioDescuento").value = precioFinal;
 
-    if (precioFinal >= 120){
+    if (precioFinal >= 120) {
 
         ingresosBrutos = precioFinal * 0.10;
-        alert ("IIBB Usted pago $" + ingresosBrutos);
-        }
+        alert("IIBB Usted pago $" + ingresosBrutos);
+    }
 }
-    
+

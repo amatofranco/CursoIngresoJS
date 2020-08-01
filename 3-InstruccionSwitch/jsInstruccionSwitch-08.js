@@ -1,15 +1,19 @@
 function mostrar()
 {
-	let destinoIngresado;
-	destinoIngresado = document.getElementById("txtIdDestino").value;
-	switch(destinoIngresado){
+	let destino;
+	destino = document.getElementById("txtIdDestino").value;
+	switch(destino){
 
 		case "Bariloche":
-		case "Cordoba": //Así figura en el HTML (En vez de "Ushuaia")
-			alert("Acá hace frío");
+		case "Ushuaia":
+			alert("Frío");
+			break;
+		case "Mar del plata":
+		case "Cataratas":
+			alert("Calor");
 			break;
 		default:
-			alert("Acá hace calor");
+			alert("Provincia no contemplada");
 			break;
 	}
 

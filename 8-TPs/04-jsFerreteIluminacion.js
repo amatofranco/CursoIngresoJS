@@ -71,13 +71,13 @@ function CalcularPrecio ()
 
         iibb = precioConDescuento * 0.10;
         precioFinal = precioConDescuento + iibb;
-        alert ("IIBB Usted pago $" + iibb);
+        alert ("IIBB Usted pago $" + iibb.toFixed(2));
         }     
     else {
         precioFinal = precioConDescuento;
     }
       
-    document.getElementById("txtIdprecioDescuento").value = precioFinal;
+    document.getElementById("txtIdprecioDescuento").value = precioFinal.toFixed(2);
 
     
     }

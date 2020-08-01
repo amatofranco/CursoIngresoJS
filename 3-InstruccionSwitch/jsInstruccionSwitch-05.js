@@ -4,11 +4,24 @@ function mostrar()
 	let horaDelDia;
 	horaDelDia = parseInt(document.getElementById("txtIdHora").value);
 
+	switch(horaDelDia){
+
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		alert("Es de mañana");
+		break;
+	}
+
+	/*
 	switch(true){
 
-		case (horaDelDia >=7 && horaDelDia <=11):
+		case (horaDelDia >= 7 && horaDelDia <= 11): // no usamos rangos en un case 
 		alert("Es de mañana");
-
+		break;
 	}
+	*/
 
 }//FIN DE LA FUNCIÓN

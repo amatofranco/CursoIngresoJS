@@ -1,64 +1,53 @@
-function mostrar()
-{
+function mostrar() {
 	let destino;
 	let estacion;
 	let porcentaje;
-	let precioBase;
-	let precioFinal; 
+	let precioFinal;
+	const precioBase = 15000;	
 
 	destino = document.getElementById("txtIdDestino").value;
 	estacion = document.getElementById("txtIdEstacion").value;
-	
-	
-	switch(estacion){
+
+	switch (estacion) {
 
 		case "Invierno":
-			switch (destino){
-				case "Bariloche":
+
+			if (destino == "Bariloche") {
 				porcentaje = 1.20;
-				break;
-
-				case "Cataratas":
-				case "Cordoba":
-				porcentaje = 0.90;
-				break;
-
-				case "Mar del plata":
+			}
+			else if (destino == "Mar del plata") {
 				porcentaje = 0.80;
+			}
+			else {
+				porcentaje = 0.90;
 			}
 			break;
 
 		case "Verano":
-			switch (destino){
-				case "Bariloche":
-				porcentaje = 0.90;
-				break;
 
-				case "Cataratas":
-				case "Cordoba":
-				porcentaje = 1.10;
-				break;
-
-				case "Mar del plata":
+			if (destino == "Bariloche") {
+				porcentaje = 0.80;
+			}
+			else if (destino == "Mar del plata") {
 				porcentaje = 1.20;
-				break;
+			}
+			else {
+				porcentaje = 1.10;
 			}
 			break;
 
 		case "Otoño":
 		case "Primavera":
-			switch (destino) {
-				case "Cordoba":
+			if (destino == "Cordoba") {
 				porcentaje = 1;
-				break;
-
-				default:
+			}
+			else {
 				porcentaje = 1.10;
 			}
+		break;
 	}
 
-	precioBase = 15000;
 	precioFinal = precioBase * porcentaje;
-	alert ("El precio final para viajar a " + destino + " en " + estacion + " es de $" + precioFinal);
+	alert("El precio final para viajar a " + destino + " en " + estacion + " es de $" + precioFinal);
 
 }//FIN DE LA FUNCIÓN
