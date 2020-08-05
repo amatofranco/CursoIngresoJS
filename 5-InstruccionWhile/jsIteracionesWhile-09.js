@@ -27,7 +27,7 @@ function mostrar() {
 		
 		contador++;
 
-		respuesta = prompt("¿Desea agregar otro número?");
+		respuesta = prompt("¿Desea agregar otro número? si/no);
 	}
 
 	while (respuesta == "si");

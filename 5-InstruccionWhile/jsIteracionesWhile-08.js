@@ -6,31 +6,33 @@ function mostrar() {
 
 	let numeroIngresado;
 	let sumaPositivo = 0;
-	let multiplicacionNegativos = 1;
-	let contadorPositivo = 0;
-	let contadorNegativo = 0;
+	let multiplicacionNegativos = 1; //El 1 es el elemento nulo del producto
 	let respuesta;
 
 
 	do {
 		numeroIngresado = parseInt(prompt("Ingrese un número"));
 
-		if (numeroIngresado >= 0) {
-			sumaPositivo = numeroIngresado + sumaPositivo;
-			contadorPositivo++;
-		}
+		if (! isNaN(numeroIngresado) ) { // validación de numero 
 
-		else {
-			multiplicacionNegativos = numeroIngresado * multiplicacionNegativos;
-			contadorNegativo++;
+			if (numeroIngresado >= 0) {
+				sumaPositivo = numeroIngresado + sumaPositivo;
+				contadorPositivo++;
+			}
+
+			else {
+				multiplicacionNegativos = numeroIngresado * multiplicacionNegativos;
+			}
 		}
-		
-		respuesta = prompt("¿Desea agregar otro número?");
-	}
+			else {
+				alert("Número no válido");
+			}
+
+			respuesta = prompt("¿Desea agregar otro número? si/no");
+		}
 
 	while (respuesta == "si");
 
-	alert("Positivos: " + contadorPositivo + " Negativos: " + contadorNegativo);
 	document.getElementById("txtIdSuma").value = "Suma positivos: " + sumaPositivo;
 	document.getElementById("txtIdProducto").value = "Producto negativos: " + multiplicacionNegativos;
 

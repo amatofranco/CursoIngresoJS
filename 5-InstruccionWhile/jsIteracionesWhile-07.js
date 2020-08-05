@@ -14,7 +14,7 @@ function mostrar() {
 		numeroIngresado = parseInt(prompt("Ingrese un número"));
 		acumulador = numeroIngresado + acumulador;
 		contador++;
-		respuesta = prompt("¿Desea agregar otro número?");
+		respuesta = prompt("¿Desea agregar otro número? si/no");
 	}
 	while (respuesta == "si");
 

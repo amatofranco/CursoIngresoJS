@@ -25,7 +25,7 @@ function verificar()
   let numIngresado;
   numIngresado = parseInt(document.getElementById("txtIdNumero").value);
 
-  contadorIntentos = contadorIntentos + 1;
+  contadorIntentos++;
 
   document.getElementById("txtIdIntentos").value = contadorIntentos;
 

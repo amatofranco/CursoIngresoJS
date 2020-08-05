@@ -45,7 +45,7 @@ function mostrar() {
 			contadorPar++;
 		}
 
-		respuesta = prompt("¿Desea agregar otro número?");
+		respuesta = prompt("¿Desea agregar otro número? si/no");
 	}
 	while (respuesta == "si");
 
@@ -58,9 +58,7 @@ function mostrar() {
 		promedioNegativos = sumaNegativo / contadorNegativo;
 	}
 
-	if (contadorPositivo != 0 && contadorNegativo != 0) {
-		diferencia = sumaPositivo - sumaNegativo;
-	}
+	diferencia = sumaPositivo - sumaNegativo;
 
 	document.write("<h2>Suma positivos: " + sumaPositivo +
 		"<br> Suma negativos: " + sumaNegativo +
